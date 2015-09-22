@@ -10,6 +10,36 @@
 </head>
 
 <body>
+  <form name="conversion_form">
+    <p style="text-align: center;">
+      <input type="text" name="lbs_weight" id="lbs_weight" size="5" />lbs. =
+      <input type="text" name="gsm_weight" id="gsm_weight" size="5" />g/sm
+      <br />
+      <fieldset style="width: 100px; margin-left: auto; margin-right: auto;">
+        <legend>Paper Type</legend>
+        <input type="radio" name="paper_type" onClick="doConversion(this.value);" id="text" value="text" />
+        <label for="text">Text</label>
+        <br />
+        <input type="radio" name="paper_type" onClick="doConversion(this.value);" id="cover" value="cover" />
+        <label for="cover">Cover</label>
+        <br />
+        <input type="radio" name="paper_type" onClick="doConversion(this.value);" id="index" value="index" />
+        <label for="index">Index</label>
+        <br />
+        <input type="radio" name="paper_type" onClick="doConversion(this.value);" id="vellum" value="vellum" />
+        <label for="vellum">Vellum</label>
+        <br />
+        <input type="radio" name="paper_type" onClick="doConversion(this.value);" id="tag" value="tag" />
+        <label for="tag">Tag</label>
+        <br />
+        <input type="radio" name="paper_type" onClick="doConversion(this.value);" id="bond" value="bond" />
+        <label for="bond">Bond</label>
+        <br />
+        <input type="radio" name="paper_type" onClick="doConversion(this.value);" id="bristol" value="bristol" />
+        <label for="bristol">Bristol</label>
+      </fieldset>
+    </p>
+  </form>
   <script type="text/javascript">
     // Constants
     var PAPER_WEIGHT_TABLE = {
