@@ -10,6 +10,27 @@
 </head>
 
 <body>
+  <script type="text/javascript">
+    // Constants
+    var PAPER_WEIGHT_TABLE = {
+      //Lbs to g/sm conversion rate table
+      "text": 1.48,
+      "cover": 2.708,
+      "index": 1.81,
+      "vellum": 2.91,
+      "tag": 1.63,
+      "bond": 3.69,
+      "bristol": 2.19
+    };
+
+    // Does the conversion calculations
+    function doConversion(selectedType) {
+      var paperType = selectedType;
+      var lbsWeight = Number(document.getElementById("lbs_weight").value);
+      var gsmWeight = lbsWeight * PAPER_WEIGHT_TABLE[paperType];
+      document.getElementById("gsm_weight").value = gsmWeight.toPrecision(5);
+    }
+  </script>
 </body>
 
 </html>
